@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D62E3D204AB32B005E5CED /* NewViewConroller.swift */; };
 		18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1C2D12049692400333ACC /* AppDelegate.swift */; };
 		18F1C2D42049692400333ACC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1C2D32049692400333ACC /* FirstViewController.swift */; };
 		18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1C2D52049692400333ACC /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18D62E3D204AB32B005E5CED /* NewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewConroller.swift; sourceTree = "<group>"; };
 		18F1C2CE2049692400333ACC /* WannaEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F1C2D12049692400333ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18F1C2D32049692400333ACC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				18F1C2D32049692400333ACC /* FirstViewController.swift */,
 				18F1C2D52049692400333ACC /* SecondViewController.swift */,
 				18F1C2D72049692400333ACC /* Main.storyboard */,
+				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
 				18F1C2DA2049692400333ACC /* Assets.xcassets */,
 				18F1C2DC2049692400333ACC /* LaunchScreen.storyboard */,
 				18F1C2DF2049692400333ACC /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
+				18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */,
 				18F1C2D42049692400333ACC /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
