@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		163F870BEDE20AD42011D8DF /* Pods_WannaEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */; };
 		18D136A120569DE700A400F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A020569DE700A400F1 /* TableViewController.swift */; };
-		18D136A72056BB1A00A400F1 /* PViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A62056BB1A00A400F1 /* PViewController.swift */; };
+		18D136AA2057E9E100A400F1 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A92057E9E100A400F1 /* PickerViewController.swift */; };
+		18D136AC2058035F00A400F1 /* proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136AB2058035F00A400F1 /* proto.swift */; };
 		18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D62E3D204AB32B005E5CED /* NewViewConroller.swift */; };
 		18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA1B02052901F00EF7DAB /* LoginViewController.swift */; };
 		18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1C2D12049692400333ACC /* AppDelegate.swift */; };
@@ -20,7 +22,8 @@
 
 /* Begin PBXFileReference section */
 		18D136A020569DE700A400F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		18D136A62056BB1A00A400F1 /* PViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PViewController.swift; sourceTree = "<group>"; };
+		18D136A92057E9E100A400F1 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		18D136AB2058035F00A400F1 /* proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proto.swift; sourceTree = "<group>"; };
 		18D62E3D204AB32B005E5CED /* NewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewConroller.swift; sourceTree = "<group>"; };
 		18EEA1B02052901F00EF7DAB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18F1C2CE2049692400333ACC /* WannaEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +33,9 @@
 		18F1C2DA2049692400333ACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F1C2DD2049692400333ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F1C2DF2049692400333ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69651F2D96EEA0F96BAC1CC7 /* Pods-WannaEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat.debug.xcconfig"; sourceTree = "<group>"; };
+		BF23D8127BFDF18826D64E51 /* Pods-WannaEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat.release.xcconfig"; sourceTree = "<group>"; };
+		D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				163F870BEDE20AD42011D8DF /* Pods_WannaEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				18F1C2D02049692400333ACC /* WannaEat */,
 				18F1C2CF2049692400333ACC /* Products */,
+				730BD8FF3CA2DD1484BA5809 /* Pods */,
+				D4F323586B4F205B3BA3C3A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,16 +73,34 @@
 			children = (
 				18F1C2D12049692400333ACC /* AppDelegate.swift */,
 				18EEA1B02052901F00EF7DAB /* LoginViewController.swift */,
+				18D136AB2058035F00A400F1 /* proto.swift */,
 				18D136A020569DE700A400F1 /* TableViewController.swift */,
 				18F1C2D52049692400333ACC /* SecondViewController.swift */,
+				18D136A92057E9E100A400F1 /* PickerViewController.swift */,
 				18F1C2D72049692400333ACC /* Main.storyboard */,
-				18D136A62056BB1A00A400F1 /* PViewController.swift */,
 				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
 				18F1C2DA2049692400333ACC /* Assets.xcassets */,
 				18F1C2DC2049692400333ACC /* LaunchScreen.storyboard */,
 				18F1C2DF2049692400333ACC /* Info.plist */,
 			);
 			path = WannaEat;
+			sourceTree = "<group>";
+		};
+		730BD8FF3CA2DD1484BA5809 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69651F2D96EEA0F96BAC1CC7 /* Pods-WannaEat.debug.xcconfig */,
+				BF23D8127BFDF18826D64E51 /* Pods-WannaEat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4F323586B4F205B3BA3C3A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F1C2E22049692400333ACC /* Build configuration list for PBXNativeTarget "WannaEat" */;
 			buildPhases = (
+				D89DEF784796B1A13361D719 /* [CP] Check Pods Manifest.lock */,
 				18F1C2CA2049692400333ACC /* Sources */,
 				18F1C2CB2049692400333ACC /* Frameworks */,
 				18F1C2CC2049692400333ACC /* Resources */,
+				D022502F643E909CAE318753 /* [CP] Embed Pods Frameworks */,
+				D0D011B12110F2D4173611E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,13 +173,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D022502F643E909CAE318753 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0D011B12110F2D4173611E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D89DEF784796B1A13361D719 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WannaEat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18F1C2CA2049692400333ACC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D136AA2057E9E100A400F1 /* PickerViewController.swift in Sources */,
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
-				18D136A72056BB1A00A400F1 /* PViewController.swift in Sources */,
+				18D136AC2058035F00A400F1 /* proto.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
 				18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */,
 				18D136A120569DE700A400F1 /* TableViewController.swift in Sources */,
@@ -288,9 +373,11 @@
 		};
 		18F1C2E32049692400333ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69651F2D96EEA0F96BAC1CC7 /* Pods-WannaEat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCD57B2DWX;
 				INFOPLIST_FILE = WannaEat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nikita.WannaEat;
@@ -302,9 +389,11 @@
 		};
 		18F1C2E42049692400333ACC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF23D8127BFDF18826D64E51 /* Pods-WannaEat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCD57B2DWX;
 				INFOPLIST_FILE = WannaEat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nikita.WannaEat;

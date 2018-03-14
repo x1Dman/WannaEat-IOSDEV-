@@ -11,14 +11,17 @@ import UIKit
 class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
     
-    var strArr = ["salt"]
+    
+    var strArr = ["salt","milk","meat"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        self.imageView.image = UIImage(named: "Salt")
         // Do any additional setup after loading the view.
     }
     
@@ -42,9 +45,13 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         switch row {
         case 0:
-            print("kek")
+            self.imageView.image = UIImage(named: "Salt")
+        case 1:
+            self.imageView.image = UIImage(named: "Milk")
+        case 2:
+            self.imageView.image = UIImage(named: "Meat")
         default:
-            print("lmao")
+            break
         }
     }
     
@@ -59,4 +66,5 @@ class PickerViewController: UIViewController, UIPickerViewDelegate, UIPickerView
      */
     
 }
+
 
