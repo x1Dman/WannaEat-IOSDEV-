@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B2EE611B8B307F543304B8E19F3DFAB"
-               BuildableName = "Pods_WannaEat.framework"
-               BlueprintName = "Pods-WannaEat"
+               BlueprintIdentifier = "1053405F1F7488B4AD94BD05AC90814D"
+               BuildableName = "Socket.framework"
+               BlueprintName = "BlueSocket"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B2EE611B8B307F543304B8E19F3DFAB"
-            BuildableName = "Pods_WannaEat.framework"
-            BlueprintName = "Pods-WannaEat"
+            BlueprintIdentifier = "1053405F1F7488B4AD94BD05AC90814D"
+            BuildableName = "Socket.framework"
+            BlueprintName = "BlueSocket"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

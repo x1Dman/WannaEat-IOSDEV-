@@ -21,6 +21,7 @@ class LoginViewController: UIViewController , UITextFieldDelegate {
             loginLabel.text = ""
             passLabel.text = ""
             loginLabel.resignFirstResponder()
+            passLabel.resignFirstResponder()
         }
     }
     @IBAction func loginDidEnd(_ sender: Any) {
@@ -36,26 +37,23 @@ class LoginViewController: UIViewController , UITextFieldDelegate {
         case .failure:
             print("sucks")
         }
-        var json: Any?
-        let encodedData = try? JSONEncoder().encode("Hi")
-        if let data = encodedData {
-            client.send(data: data)
-            json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-            if let json = json {
-                print("KEK")
-            }
-        }
-//        client.send(string: "Hi")
-//        loginLabel.delegate = self
-//        passLabel.delegate = self
         loginButton.isHidden = true
-        // Do any additional setup after loading the view.
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first{
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        loginButton.isHidden = false
+        if loginLabel.text == "" {
+            loginButton.isHidden = true
+        }else{
+            loginButton.isHidden = false
+        }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        loginButton.isHidden = true
+            loginButton.isHidden = false
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

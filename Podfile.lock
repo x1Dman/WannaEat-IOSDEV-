@@ -1,12 +1,18 @@
 PODS:
+  - Alamofire (4.7.0)
+  - BlueSocket (1.0.0)
   - SwiftSocket (2.0.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - BlueSocket
   - SwiftSocket
 
 SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  BlueSocket: e3cd2bb08ec5c769299b148faad317038c5258b0
   SwiftSocket: 6f4c9c63fbc5c1d61188936bb3c599fd546f40ae
 
-PODFILE CHECKSUM: 79024b0ed8b8af8fc53ecf49b256eb4279cd9b0a
+PODFILE CHECKSUM: 6cb6a27a1f22ede10eed62c2470102b45286e5af
 
 COCOAPODS: 1.4.0

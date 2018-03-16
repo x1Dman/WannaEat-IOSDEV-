@@ -7,18 +7,51 @@
 //
 
 import UIKit
+import Foundation
+
 
 class TableViewController: UITableViewController {
 
+    @IBAction func plusPushed(_ sender: Any) {
+        let alert = UIAlertController(title: "Add element to the table", message: nil, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addTextField(configurationHandler: { (UITextField) in UITextField.placeholder = "Product name"})
+        let alertActionAdd = UIAlertAction(title: "Add", style: UIAlertActionStyle.default, handler: {(UIAlertAction) in
+            if alert.textFields?.first?.text != "" {
+                self.dataArr.append((alert.textFields?.first?.text)!)
+                self.tableView.reloadData()
+                self.saveData()
+            }
+            print("push Add")
+        })
+        
+        let alertActionCancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {(UIAlertAction) in print("push Cancel")})
+        
+        alert.addAction(alertActionAdd)
+        alert.addAction(alertActionCancel)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    @IBAction func editPushed(_ sender: Any) {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+    }
+    @IBAction func findPushed(_ sender: Any) {
+        //saveData()
+//        let parameters = ["q": "egg,potato", "app_id":"4c3572a7","app_key": "ec26e909c477b7e015081829775c5883"] as [String : Any]
+//        Alamofire.request("https://api.edamam.com/search",parameters: parameters).responseJSON {
+//            response in debugPrint(response)
+//            if let json = response.result.value{
+//                print("JSON: \(json)")
+//            }
+//        }
+    }
+    
     var dataArr: [String] = []
     var textForArr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataArr.append("shock1")
-        dataArr.append("shock2")
-        dataArr.append("shock3")
-        dataArr.append(")")
+        loadData()
+        self.refreshControl = nil
     }
 
 //    override func didReceiveMemoryWarning() {
@@ -27,7 +60,16 @@ class TableViewController: UITableViewController {
 //    }
 
     // MARK: - Table view data source
-
+    func saveData(){
+        let defaults = UserDefaults.standard
+        defaults.set(dataArr, forKey: "dataArr")
+        
+    }
+    func loadData(){
+        let defaults = UserDefaults.standard
+        dataArr = defaults.object(forKey: "dataArr") as? [String] ?? [String]()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -42,7 +84,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "A", for: indexPath)
         let currentText = dataArr[indexPath.row]
         cell.textLabel?.text = currentText
-        print("currentText")
+        //cell.imageView?.image = UIImage(named: currentText)
         return cell
     }
 
@@ -64,20 +106,20 @@ class TableViewController: UITableViewController {
         }    
     }
 
-    /*
-    // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+        let from = dataArr[fromIndexPath.row]
+        dataArr.remove(at: fromIndexPath.row)
+        dataArr.insert(from, at: to.row)
+        
+        saveData()
+        tableView.reloadData()
     }
-    */
 
-    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
 
     /*
     // MARK: - Navigation

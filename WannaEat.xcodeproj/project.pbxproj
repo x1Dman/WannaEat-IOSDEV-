@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		163F870BEDE20AD42011D8DF /* Pods_WannaEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */; };
 		18D136A120569DE700A400F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A020569DE700A400F1 /* TableViewController.swift */; };
-		18D136AA2057E9E100A400F1 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A92057E9E100A400F1 /* PickerViewController.swift */; };
-		18D136AC2058035F00A400F1 /* proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136AB2058035F00A400F1 /* proto.swift */; };
 		18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D62E3D204AB32B005E5CED /* NewViewConroller.swift */; };
 		18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA1B02052901F00EF7DAB /* LoginViewController.swift */; };
 		18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1C2D12049692400333ACC /* AppDelegate.swift */; };
@@ -22,8 +20,6 @@
 
 /* Begin PBXFileReference section */
 		18D136A020569DE700A400F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		18D136A92057E9E100A400F1 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
-		18D136AB2058035F00A400F1 /* proto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = proto.swift; sourceTree = "<group>"; };
 		18D62E3D204AB32B005E5CED /* NewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewConroller.swift; sourceTree = "<group>"; };
 		18EEA1B02052901F00EF7DAB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		18F1C2CE2049692400333ACC /* WannaEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,10 +69,8 @@
 			children = (
 				18F1C2D12049692400333ACC /* AppDelegate.swift */,
 				18EEA1B02052901F00EF7DAB /* LoginViewController.swift */,
-				18D136AB2058035F00A400F1 /* proto.swift */,
 				18D136A020569DE700A400F1 /* TableViewController.swift */,
 				18F1C2D52049692400333ACC /* SecondViewController.swift */,
-				18D136A92057E9E100A400F1 /* PickerViewController.swift */,
 				18F1C2D72049692400333ACC /* Main.storyboard */,
 				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
 				18F1C2DA2049692400333ACC /* Assets.xcassets */,
@@ -181,10 +175,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BlueSocket/Socket.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,9 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D136AA2057E9E100A400F1 /* PickerViewController.swift in Sources */,
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
-				18D136AC2058035F00A400F1 /* proto.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
 				18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */,
 				18D136A120569DE700A400F1 /* TableViewController.swift in Sources */,
