@@ -36,7 +36,7 @@ class TableViewController: UITableViewController {
     }
     @IBAction func findPushed(_ sender: Any) {
         //saveData()
-//        let parameters = ["q": "egg,potato", "app_id":"4c3572a7","app_key": "ec26e909c477b7e015081829775c5883"] as [String : Any]
+//        let parameters = ["q": "egg,potato", "app_id":"","app_key": ""] as [String : Any]
 //        Alamofire.request("https://api.edamam.com/search",parameters: parameters).responseJSON {
 //            response in debugPrint(response)
 //            if let json = response.result.value{
