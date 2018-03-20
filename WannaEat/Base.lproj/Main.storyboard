@@ -11,42 +11,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Хочу поделиться!-->
-        <scene sceneID="wg7-f3-ORb">
+        <!--Recipes-->
+        <scene sceneID="Bs8-2C-eAh">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <tableViewController id="1WP-Rg-3bY" customClass="SecondTableViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aeO-3m-mda">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="188" y="333.5" width="0.0" height="0.0"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="341.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Хочу поделиться!" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3fK-DQ-CHY">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3fK-DQ-CHY" id="4li-JD-RMb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="9yU-Et-o0e" kind="show" id="lkG-BQ-IYV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1WP-Rg-3bY" id="uWZ-I4-yMR"/>
+                            <outlet property="delegate" destination="1WP-Rg-3bY" id="d3E-pD-TPc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Recipes" id="kHl-MM-3fG">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="vP3-s3-1s8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Dn-0I-9LR">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Recipe"/>
+                            </button>
+                            <connections>
+                                <segue destination="l3r-UH-NQm" kind="show" id="eLZ-ao-27G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oij-dy-mZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="460"/>
+            <point key="canvasLocation" x="1614" y="457"/>
+        </scene>
+        <!--WannaShare-->
+        <scene sceneID="v2c-Qp-w13">
+            <objects>
+                <navigationController id="d4J-iX-FAM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WannaShare" id="fTy-zV-siz"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZS2-vv-Ctt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1WP-Rg-3bY" kind="relationship" relationship="rootViewController" id="jUS-rN-RrA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WdA-zm-2vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="457"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="cPt-WO-lcq">
+            <objects>
+                <viewController id="bCm-UH-0Vj" customClass="RegistrationViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pM1-Ma-zVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="LWE-ew-Uyj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8RV-xj-4Yq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S5n-EO-zfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="-710"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="thz-oj-sCV">
@@ -56,62 +95,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tb1-j8-5Mm">
-                                <rect key="frame" x="139" y="244" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="loginDidEnd:" destination="LcO-iT-NE4" eventType="editingDidEnd" id="LyC-vQ-9EL"/>
-                                    <outlet property="delegate" destination="LcO-iT-NE4" id="fo3-Jh-72l"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBM-WM-vtg">
-                                <rect key="frame" x="139" y="292" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="passDidEnd:" destination="LcO-iT-NE4" eventType="editingDidEnd" id="DMs-2R-8cy"/>
-                                    <outlet property="delegate" destination="LcO-iT-NE4" id="xMX-X1-hdX"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to WannaEat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f2-7v-kAi">
-                                <rect key="frame" x="50" y="83" width="274" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to WannaEat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f2-7v-kAi">
+                                <rect key="frame" x="50" y="164" width="274" height="113"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Aw-0T-1b9">
-                                <rect key="frame" x="289" y="269" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWr-T5-bZH">
+                                <rect key="frame" x="291" y="427" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="logPushed:" destination="LcO-iT-NE4" eventType="touchUpInside" id="vNW-NS-xIg"/>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="cxI-9X-dHj"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="zry-lf-jGj"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8f2-7v-kAi" firstAttribute="top" secondItem="uYi-oo-VfU" secondAttribute="top" constant="144" id="dS9-an-WuJ"/>
+                            <constraint firstItem="8f2-7v-kAi" firstAttribute="leading" secondItem="uYi-oo-VfU" secondAttribute="leading" constant="50" id="fMD-2e-3co"/>
+                            <constraint firstItem="8f2-7v-kAi" firstAttribute="centerX" secondItem="zWO-Y6-cs9" secondAttribute="centerX" id="mgA-5T-4Rl"/>
+                            <constraint firstItem="uYi-oo-VfU" firstAttribute="bottom" secondItem="8f2-7v-kAi" secondAttribute="bottom" constant="390" id="yXS-2A-qww"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uYi-oo-VfU"/>
                     </view>
-                    <connections>
-                        <outlet property="loginButton" destination="1Aw-0T-1b9" id="ZAH-H8-Bxw"/>
-                        <outlet property="loginLabel" destination="Tb1-j8-5Mm" id="gNm-5C-cZz"/>
-                        <outlet property="passLabel" destination="sBM-WM-vtg" id="wim-2p-wL8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl3-Ah-vfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-866.39999999999998" y="6.746626686656672"/>
+            <point key="canvasLocation" x="-866" y="0.0"/>
         </scene>
-        <!--Аккаунт-->
+        <!--Account-->
         <scene sceneID="85m-bl-eme">
             <objects>
-                <viewController id="srA-MJ-wQD" sceneMemberID="viewController">
+                <viewController id="srA-MJ-wQD" customClass="AccViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GYl-a9-rY1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +164,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="cxI-e2-EPj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Аккаунт" id="pjJ-tQ-tfy"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="pjJ-tQ-tfy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeK-nW-3AK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -168,19 +184,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="jAN-pA-Ocr" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="srA-MJ-wQD" kind="relationship" relationship="viewControllers" id="Clf-Zq-W62"/>
+                        <segue destination="d4J-iX-FAM" kind="relationship" relationship="viewControllers" id="fBi-e3-Liv"/>
+                        <segue destination="srA-MJ-wQD" kind="relationship" relationship="viewControllers" id="JVf-62-m7x"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Хочу есть!-->
+        <!--WannaEat-->
         <scene sceneID="PmJ-8D-n3Z">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jAN-pA-Ocr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Хочу есть!" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="WannaEat" image="first" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fPW-VU-Yih">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -195,16 +211,16 @@
             </objects>
             <point key="canvasLocation" x="748.79999999999995" y="-321.13943028485761"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Score Table View Controller-->
         <scene sceneID="2Kv-J3-yrg">
             <objects>
-                <tableViewController id="aJe-Rr-OG6" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ScoreTableViewController" id="aJe-Rr-OG6" customClass="ScoreTableViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9oi-F8-x7V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xFK-lz-UVO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="xFK-lz-UVO">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xFK-lz-UVO" id="aqZ-tA-BqG">
@@ -221,9 +237,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPm-3v-omR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="-1081"/>
+            <point key="canvasLocation" x="2308" y="-322"/>
         </scene>
-        <!--YourFood-->
+        <!--Food-->
         <scene sceneID="TkL-As-6QC">
             <objects>
                 <tableViewController id="fVi-yw-lD9" customClass="TableViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,6 +247,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="A" textLabel="Wre-Fg-58x" rowHeight="1" style="IBUITableViewCellStyleDefault" id="cF4-K9-OQ3">
                                 <rect key="frame" x="0.0" y="28" width="375" height="1"/>
@@ -255,7 +272,7 @@
                             <outlet property="delegate" destination="fVi-yw-lD9" id="HAu-r3-79H"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="YourFood" id="aN3-5A-g6J">
+                    <navigationItem key="navigationItem" title="Food" id="aN3-5A-g6J">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="ohN-ie-FuZ">
                             <connections>
                                 <action selector="editPushed:" destination="fVi-yw-lD9" id="VKN-ra-bKp"/>
@@ -267,10 +284,9 @@
                                     <action selector="plusPushed:" destination="fVi-yw-lD9" id="J8t-ZE-NBM"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Find" id="Nqo-g5-a0v">
+                            <barButtonItem style="plain" systemItem="done" id="qUu-jU-jKA">
                                 <connections>
-                                    <action selector="findPushed:" destination="fVi-yw-lD9" id="jgt-Gx-vxq"/>
-                                    <segue destination="aJe-Rr-OG6" kind="show" id="pVZ-7v-nQo"/>
+                                    <segue destination="aJe-Rr-OG6" kind="show" id="VLy-L5-0HB"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -299,11 +315,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rex-by-Zjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2444" y="-322"/>
+            <point key="canvasLocation" x="2444" y="457"/>
+        </scene>
+        <!--My Recipes View Controller-->
+        <scene sceneID="bYL-fR-pAP">
+            <objects>
+                <viewController id="9yU-Et-o0e" customClass="MyRecipesViewController" customModule="WannaEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UCC-4d-Tlg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-Ha-wcY">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="IxX-sF-55L"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxi-f1-od1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444" y="1230"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

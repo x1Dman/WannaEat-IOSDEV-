@@ -1,4 +1,3 @@
-//
 //  TableViewController.swift
 //  WannaEat
 //
@@ -9,9 +8,40 @@
 import UIKit
 import Foundation
 
+struct NewPuppyParse : Decodable{
+    let title: String
+    let version: Double
+    let href: String
+    let results: [PuppyParse]
+}
+
+struct PuppyParse: Decodable {
+    let href: String?
+    let ingredients: String?
+    let thumbnail: String?
+    let title: String?
+    
+    init(json: [String: Any]){
+        href = json["href"] as? String ?? ""
+        ingredients = json["ingredients"] as? String  ?? ""
+        thumbnail = json["thumbnail"] as? String  ?? ""
+        title = json["title"] as? String  ?? ""
+    }
+}
+
+
+func miniParse(str: String) -> String{
+    var newStr = str
+    return newStr.trim()
+}
+
 
 class TableViewController: UITableViewController {
-
+    var parse: [PuppyParse] = []
+    var dataArr: [String] = []
+    var textForArr = ""
+    
+    
     @IBAction func plusPushed(_ sender: Any) {
         let alert = UIAlertController(title: "Add element to the table", message: nil, preferredStyle: UIAlertControllerStyle.alert)
         alert.addTextField(configurationHandler: { (UITextField) in UITextField.placeholder = "Product name"})
@@ -34,30 +64,12 @@ class TableViewController: UITableViewController {
     @IBAction func editPushed(_ sender: Any) {
         tableView.setEditing(!tableView.isEditing, animated: true)
     }
-    @IBAction func findPushed(_ sender: Any) {
-        //saveData()
-//        let parameters = ["q": "egg,potato", "app_id":"4c3572a7","app_key": "ec26e909c477b7e015081829775c5883"] as [String : Any]
-//        Alamofire.request("https://api.edamam.com/search",parameters: parameters).responseJSON {
-//            response in debugPrint(response)
-//            if let json = response.result.value{
-//                print("JSON: \(json)")
-//            }
-//        }
-    }
-    
-    var dataArr: [String] = []
-    var textForArr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         self.refreshControl = nil
     }
-
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//        // Dispose of any resources that can be recreated.
-//    }
 
     // MARK: - Table view data source
     func saveData(){
@@ -110,7 +122,6 @@ class TableViewController: UITableViewController {
         let from = dataArr[fromIndexPath.row]
         dataArr.remove(at: fromIndexPath.row)
         dataArr.insert(from, at: to.row)
-        
         saveData()
         tableView.reloadData()
     }
@@ -121,14 +132,35 @@ class TableViewController: UITableViewController {
         return true
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func letsConnect() -> [PuppyParse]{
+        var str = "i="
+        for i in 0..<dataArr.count {
+            if i != dataArr.count - 1 {
+                str += dataArr[i] + ","
+            }else{
+                str += dataArr[i]
+            }
+        }
+        let jsonUrlString = "http://www.recipepuppy.com/api/?" + str
+        print(jsonUrlString)
+        guard let url = URL(string: jsonUrlString) else { return [] }
+        
+        URLSession.shared.dataTask(with: url){ (data,response,err) in
+            guard let data = data else {return}
+            //print(dataAsString!)
+            do{
+                let courses = try JSONDecoder().decode(NewPuppyParse.self, from: data)
+                self.parse = courses.results
+            }catch let jsonErr{
+                print(jsonErr)
+            }
+            }.resume()
+        return self.parse
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationTVC: ScoreTableViewController = segue.destination as! ScoreTableViewController
+        print(letsConnect())
+        destinationTVC.abc = letsConnect()
+    }
 }

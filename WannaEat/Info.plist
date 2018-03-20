@@ -2,24 +2,37 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-<key>NSAppTransportSecurity</key>
-<dict>
-  <key>NSExceptionDomains</key>
-  <dict>
-    <key>https://api.edamam.com/search</key>
+	<key>NSAppTransportSecurity</key>
     <dict>
-      <!--Include to allow subdomains-->
-      <key>NSIncludesSubdomains</key>
-      <true/>
-      <!--Include to allow HTTP requests-->
-      <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-      <true/>
-      <!--Include to specify minimum TLS version-->
-      <key>NSTemporaryExceptionMinimumTLSVersion</key>
-      <string>TLSv1.1</string>
-    </dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>http://www.recipepuppy.com/api/</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+       </dict>
   </dict>
-</dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb274867119717623</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

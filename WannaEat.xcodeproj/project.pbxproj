@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		163F870BEDE20AD42011D8DF /* Pods_WannaEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */; };
+		18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */; };
+		18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */; };
+		18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB7205BE10200BE59A3 /* AccViewController.swift */; };
+		18272ABA205BFF7700BE59A3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB9205BFF7700BE59A3 /* RegistrationViewController.swift */; };
+		183EA9FD20614E5D0069A25E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */; };
 		18D136A120569DE700A400F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A020569DE700A400F1 /* TableViewController.swift */; };
 		18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D62E3D204AB32B005E5CED /* NewViewConroller.swift */; };
 		18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA1B02052901F00EF7DAB /* LoginViewController.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesViewController.swift; sourceTree = "<group>"; };
+		18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
+		18272AB7205BE10200BE59A3 /* AccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccViewController.swift; sourceTree = "<group>"; };
+		18272AB9205BFF7700BE59A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		18D136A020569DE700A400F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		18D62E3D204AB32B005E5CED /* NewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewConroller.swift; sourceTree = "<group>"; };
 		18EEA1B02052901F00EF7DAB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +56,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183EA9FE2061C8B90069A25E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18D136A020569DE700A400F1 /* TableViewController.swift */,
+				183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */,
+				18EEA1B02052901F00EF7DAB /* LoginViewController.swift */,
+				18F1C2D52049692400333ACC /* SecondViewController.swift */,
+				18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */,
+				18272AB7205BE10200BE59A3 /* AccViewController.swift */,
+				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
+				18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */,
+				18272AB9205BFF7700BE59A3 /* RegistrationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		18F1C2C52049692400333ACC = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +93,9 @@
 		18F1C2D02049692400333ACC /* WannaEat */ = {
 			isa = PBXGroup;
 			children = (
+				183EA9FE2061C8B90069A25E /* Controllers */,
 				18F1C2D12049692400333ACC /* AppDelegate.swift */,
-				18EEA1B02052901F00EF7DAB /* LoginViewController.swift */,
-				18D136A020569DE700A400F1 /* TableViewController.swift */,
-				18F1C2D52049692400333ACC /* SecondViewController.swift */,
 				18F1C2D72049692400333ACC /* Main.storyboard */,
-				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
 				18F1C2DA2049692400333ACC /* Assets.xcassets */,
 				18F1C2DC2049692400333ACC /* LaunchScreen.storyboard */,
 				18F1C2DF2049692400333ACC /* Info.plist */,
@@ -176,14 +199,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BlueSocket/Socket.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Socket.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,10 +263,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */,
+				18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */,
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
+				18272ABA205BFF7700BE59A3 /* RegistrationViewController.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
 				18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */,
+				18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */,
 				18D136A120569DE700A400F1 /* TableViewController.swift in Sources */,
+				183EA9FD20614E5D0069A25E /* ScoreTableViewController.swift in Sources */,
 				18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
