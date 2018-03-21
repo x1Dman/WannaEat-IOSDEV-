@@ -6,5 +6,6 @@ target 'WannaEat' do
   use_frameworks!
 
   # Pods for WannaEat
-
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 end

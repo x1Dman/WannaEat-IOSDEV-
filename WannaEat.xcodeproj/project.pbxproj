@@ -11,8 +11,8 @@
 		18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */; };
 		18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */; };
 		18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB7205BE10200BE59A3 /* AccViewController.swift */; };
-		18272ABA205BFF7700BE59A3 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB9205BFF7700BE59A3 /* RegistrationViewController.swift */; };
 		183EA9FD20614E5D0069A25E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */; };
+		184AD80F2062751D003950EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 184AD80E2062751D003950EE /* GoogleService-Info.plist */; };
 		18D136A120569DE700A400F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A020569DE700A400F1 /* TableViewController.swift */; };
 		18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D62E3D204AB32B005E5CED /* NewViewConroller.swift */; };
 		18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA1B02052901F00EF7DAB /* LoginViewController.swift */; };
@@ -27,8 +27,8 @@
 		18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesViewController.swift; sourceTree = "<group>"; };
 		18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		18272AB7205BE10200BE59A3 /* AccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccViewController.swift; sourceTree = "<group>"; };
-		18272AB9205BFF7700BE59A3 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
+		184AD80E2062751D003950EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18D136A020569DE700A400F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		18D62E3D204AB32B005E5CED /* NewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewConroller.swift; sourceTree = "<group>"; };
 		18EEA1B02052901F00EF7DAB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 				18272AB7205BE10200BE59A3 /* AccViewController.swift */,
 				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
 				18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */,
-				18272AB9205BFF7700BE59A3 /* RegistrationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,6 +97,7 @@
 				18F1C2D72049692400333ACC /* Main.storyboard */,
 				18F1C2DA2049692400333ACC /* Assets.xcassets */,
 				18F1C2DC2049692400333ACC /* LaunchScreen.storyboard */,
+				184AD80E2062751D003950EE /* GoogleService-Info.plist */,
 				18F1C2DF2049692400333ACC /* Info.plist */,
 			);
 			path = WannaEat;
@@ -183,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18F1C2DE2049692400333ACC /* LaunchScreen.storyboard in Resources */,
+				184AD80F2062751D003950EE /* GoogleService-Info.plist in Resources */,
 				18F1C2DB2049692400333ACC /* Assets.xcassets in Resources */,
 				18F1C2D92049692400333ACC /* Main.storyboard in Resources */,
 			);
@@ -198,25 +199,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -229,9 +220,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,7 +274,6 @@
 				18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */,
 				18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */,
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
-				18272ABA205BFF7700BE59A3 /* RegistrationViewController.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
 				18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */,
 				18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */,

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>447558912065-ntdjp2tmub8dq3d8f7ce8mhfm474a3d5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.447558912065-ntdjp2tmub8dq3d8f7ce8mhfm474a3d5</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAt_ZIJ6zCwYIwZaw_2y_Q9W7c_ZBle9aE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>447558912065</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>nikita.WannaEat</string>
+	<key>PROJECT_ID</key>
+	<string>wannaeat-dd8f4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wannaeat-dd8f4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:447558912065:ios:dea4600e8c4ad3df</string>
+	<key>DATABASE_URL</key>
+	<string>https://wannaeat-dd8f4.firebaseio.com</string>
+</dict>
+</plist>

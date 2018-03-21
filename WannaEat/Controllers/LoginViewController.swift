@@ -7,19 +7,48 @@
 //
 
 import UIKit
-//import FacebookCore
-//import FacebookLogin
+import FirebaseAuth
 
 class LoginViewController: UIViewController , UITextFieldDelegate {
     
-    @IBOutlet weak var passLabel: UITextField!
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
+    @IBAction func buttonPushed(_ sender: Any) {
+        if loginField.text != "" && passField.text != ""{
+            if segmentControl.selectedSegmentIndex == 0{
+                Auth.auth().signIn(withEmail: loginField.text!, password: passField.text!, completion: {(user, error) in
+                    if user != nil{
+                        //Sign in successful
+                        self.performSegue(withIdentifier: "segue", sender: self)
+                    }else{
+                        if let myError = error?.localizedDescription{
+                            print(myError)
+                        }else{
+                            print("Error")
+                        }
+                    }
+                })
+            }else{
+                Auth.auth().createUser(withEmail: loginField.text!, password: passField.text!, completion: {(user,error) in
+                    if user != nil {
+                        
+                    }else{
+                        if let myError = error?.localizedDescription{
+                            print(myError)
+                        }else{
+                            print("Error")
+                        }
+                    }
+                })
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-//        let loginButtonn = LoginButton(readPermissions: [ .publicProfile ])
-//        loginButtonn.center = view.center
-//        view.addSubview(loginButtonn)
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first{
@@ -27,21 +56,6 @@ class LoginViewController: UIViewController , UITextFieldDelegate {
         }
         super.touchesBegan(touches, with: event)
     }
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if loginLabel.text == "" {
-//            loginButton.isHidden = true
-//        }else{
-//            loginButton.isHidden = false
-//        }
-//    }
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//            loginButton.isHidden = false
-//    }
-//
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        logPushed(self)
-//        return true
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

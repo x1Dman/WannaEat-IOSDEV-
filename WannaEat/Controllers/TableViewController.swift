@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import FirebaseAuth
 
 struct NewPuppyParse : Decodable{
     let title: String
@@ -31,8 +32,8 @@ struct PuppyParse: Decodable {
 
 
 func miniParse(str: String) -> String{
-    var newStr = str
-    return newStr.trim()
+    //var newStr = str
+    return str.trim()
 }
 
 
@@ -75,7 +76,6 @@ class TableViewController: UITableViewController {
     func saveData(){
         let defaults = UserDefaults.standard
         defaults.set(dataArr, forKey: "dataArr")
-        
     }
     func loadData(){
         let defaults = UserDefaults.standard
@@ -144,23 +144,25 @@ class TableViewController: UITableViewController {
         let jsonUrlString = "http://www.recipepuppy.com/api/?" + str
         print(jsonUrlString)
         guard let url = URL(string: jsonUrlString) else { return [] }
-        
+        let group = DispatchGroup()
+        group.enter()
         URLSession.shared.dataTask(with: url){ (data,response,err) in
             guard let data = data else {return}
             //print(dataAsString!)
             do{
                 let courses = try JSONDecoder().decode(NewPuppyParse.self, from: data)
                 self.parse = courses.results
+                group.leave()
             }catch let jsonErr{
                 print(jsonErr)
             }
             }.resume()
+        group.wait()
         return self.parse
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationTVC: ScoreTableViewController = segue.destination as! ScoreTableViewController
-        print(letsConnect())
         destinationTVC.abc = letsConnect()
     }
 }
