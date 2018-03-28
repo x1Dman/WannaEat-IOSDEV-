@@ -65,6 +65,16 @@ class TableViewController: UITableViewController {
     @IBAction func editPushed(_ sender: Any) {
         tableView.setEditing(!tableView.isEditing, animated: true)
     }
+    @IBAction func findPushed(_ sender: Any) {
+        //saveData()
+//        let parameters = ["q": "egg,potato", "app_id":"","app_key": ""] as [String : Any]
+//        Alamofire.request("https://api.edamam.com/search",parameters: parameters).responseJSON {
+//            response in debugPrint(response)
+//            if let json = response.result.value{
+//                print("JSON: \(json)")
+//            }
+//        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

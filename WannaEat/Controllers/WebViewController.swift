@@ -1,20 +1,15 @@
 //
-//  AccViewController.swift
+//  WebViewController.swift
 //  WannaEat
 //
-//  Created by Apple on 16/03/2018.
+//  Created by Apple on 23/03/2018.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
 
-class AccViewController: UIViewController {
+class WebViewController: UIViewController {
 
-    @IBAction func logOut(_ sender: Any) {
-        try! Auth.auth().signOut()
-        performSegue(withIdentifier: "LogO", sender: self)
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -70,7 +70,6 @@ class ScoreTableViewController: UITableViewController {
         }else{
             cell.imageView?.image = UIImage(named: "rest")
         }
-        
         return cell
     }
 
@@ -107,14 +106,13 @@ class ScoreTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        (segue.destination as? InfoViewController)?.urlPhoto = abc[(tableView.indexPathForSelectedRow?.row)!].thumbnail
+        (segue.destination as? InfoViewController)?.receipt = abc[(tableView.indexPathForSelectedRow?.row)!].ingredients
+        (segue.destination as? InfoViewController)?.href = abc[(tableView.indexPathForSelectedRow?.row)!].href
     }
-    */
 
 }
