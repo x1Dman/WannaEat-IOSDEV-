@@ -11,8 +11,10 @@
 		18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */; };
 		18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */; };
 		18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18272AB7205BE10200BE59A3 /* AccViewController.swift */; };
+		18308AC020654C6900B12823 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18308ABF20654C6900B12823 /* WebViewController.swift */; };
 		183EA9FD20614E5D0069A25E /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */; };
 		184AD80F2062751D003950EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 184AD80E2062751D003950EE /* GoogleService-Info.plist */; };
+		18882C13206436F600908ACE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18882C12206436F600908ACE /* InfoViewController.swift */; };
 		18D136A120569DE700A400F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D136A020569DE700A400F1 /* TableViewController.swift */; };
 		18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D62E3D204AB32B005E5CED /* NewViewConroller.swift */; };
 		18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EEA1B02052901F00EF7DAB /* LoginViewController.swift */; };
@@ -21,14 +23,17 @@
 		18F1C2D92049692400333ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F1C2D72049692400333ACC /* Main.storyboard */; };
 		18F1C2DB2049692400333ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F1C2DA2049692400333ACC /* Assets.xcassets */; };
 		18F1C2DE2049692400333ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F1C2DC2049692400333ACC /* LaunchScreen.storyboard */; };
+		18F26CB5206532F300C85E67 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F26CB4206532F300C85E67 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRecipesViewController.swift; sourceTree = "<group>"; };
 		18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		18272AB7205BE10200BE59A3 /* AccViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccViewController.swift; sourceTree = "<group>"; };
+		18308ABF20654C6900B12823 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		184AD80E2062751D003950EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18882C12206436F600908ACE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		18D136A020569DE700A400F1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		18D62E3D204AB32B005E5CED /* NewViewConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewConroller.swift; sourceTree = "<group>"; };
 		18EEA1B02052901F00EF7DAB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		18F1C2DA2049692400333ACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F1C2DD2049692400333ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F1C2DF2049692400333ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F26CB4206532F300C85E67 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		69651F2D96EEA0F96BAC1CC7 /* Pods-WannaEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat.debug.xcconfig"; sourceTree = "<group>"; };
 		BF23D8127BFDF18826D64E51 /* Pods-WannaEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat.release.xcconfig"; sourceTree = "<group>"; };
 		D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,14 +65,14 @@
 		183EA9FE2061C8B90069A25E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				18D136A020569DE700A400F1 /* TableViewController.swift */,
-				183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */,
+				18F26CB3206532BE00C85E67 /* TableVC */,
 				18EEA1B02052901F00EF7DAB /* LoginViewController.swift */,
 				18F1C2D52049692400333ACC /* SecondViewController.swift */,
 				18272AB3205BDC8400BE59A3 /* MyRecipesViewController.swift */,
 				18272AB7205BE10200BE59A3 /* AccViewController.swift */,
 				18D62E3D204AB32B005E5CED /* NewViewConroller.swift */,
-				18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */,
+				18882C12206436F600908ACE /* InfoViewController.swift */,
+				18308ABF20654C6900B12823 /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -92,6 +98,7 @@
 		18F1C2D02049692400333ACC /* WannaEat */ = {
 			isa = PBXGroup;
 			children = (
+				18F26CB62065331D00C85E67 /* Model */,
 				183EA9FE2061C8B90069A25E /* Controllers */,
 				18F1C2D12049692400333ACC /* AppDelegate.swift */,
 				18F1C2D72049692400333ACC /* Main.storyboard */,
@@ -101,6 +108,24 @@
 				18F1C2DF2049692400333ACC /* Info.plist */,
 			);
 			path = WannaEat;
+			sourceTree = "<group>";
+		};
+		18F26CB3206532BE00C85E67 /* TableVC */ = {
+			isa = PBXGroup;
+			children = (
+				18D136A020569DE700A400F1 /* TableViewController.swift */,
+				183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */,
+				18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */,
+				18F26CB4206532F300C85E67 /* CustomTableViewCell.swift */,
+			);
+			path = TableVC;
+			sourceTree = "<group>";
+		};
+		18F26CB62065331D00C85E67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		730BD8FF3CA2DD1484BA5809 /* Pods */ = {
@@ -273,9 +298,12 @@
 			files = (
 				18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */,
 				18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */,
+				18F26CB5206532F300C85E67 /* CustomTableViewCell.swift in Sources */,
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
+				18882C13206436F600908ACE /* InfoViewController.swift in Sources */,
 				18D62E3E204AB32B005E5CED /* NewViewConroller.swift in Sources */,
+				18308AC020654C6900B12823 /* WebViewController.swift in Sources */,
 				18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */,
 				18D136A120569DE700A400F1 /* TableViewController.swift in Sources */,
 				183EA9FD20614E5D0069A25E /* ScoreTableViewController.swift in Sources */,

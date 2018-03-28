@@ -117,13 +117,13 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k7P-h1-F9B">
-                                <rect key="frame" x="127" y="225" width="121" height="28"/>
+                                <rect key="frame" x="128" y="225" width="119" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="AoV-r0-Zuw"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Log In"/>
+                                    <segment title="GetAcc"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hl3-Ah-vfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2985" y="152"/>
+            <point key="canvasLocation" x="-2986.4000000000001" y="151.57421289355324"/>
         </scene>
         <!--Account-->
         <scene sceneID="85m-bl-eme">
@@ -199,6 +199,9 @@
                                 <rect key="frame" x="224" y="50" width="92" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log OUT"/>
+                                <connections>
+                                    <action selector="logOut:" destination="srA-MJ-wQD" eventType="touchUpInside" id="rKR-HL-6n9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -207,7 +210,7 @@
                     <tabBarItem key="tabBarItem" title="Account" id="pjJ-tQ-tfy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="LcO-iT-NE4" kind="show" identifier="logO" id="nSe-M2-OAR"/>
+                        <segue destination="LcO-iT-NE4" kind="show" identifier="LogO" id="kNf-Mf-qIQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeK-nW-3AK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -477,6 +480,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9xp-gL-8kk"/>
+        <segue reference="kNf-Mf-qIQ"/>
     </inferredMetricsTieBreakers>
 </document>
