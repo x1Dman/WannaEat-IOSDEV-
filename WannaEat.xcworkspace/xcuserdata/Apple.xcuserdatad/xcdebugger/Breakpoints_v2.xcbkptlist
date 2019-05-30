@@ -26,90 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WannaEat/Controllers/TableVC/CustomTableViewCell.swift"
-            timestampString = "543510906.250475"
+            timestampString = "580895141.364086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3"
             endingLineNumber = "3"
             landmarkName = "unknown"
             landmarkType = "0">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WannaEat.CustomTableViewCell.__deallocating_deinit"
-                  moduleName = "WannaEat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Apple/Desktop/Programming/IOS/NewProject/WannaEat/Controllers/TableVC/CustomTableViewCell.swift"
-                  timestampString = "543942151.5455101"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WannaEat.CustomTableViewCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; WannaEat.CustomTableViewCell"
-                  moduleName = "WannaEat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Apple/Desktop/Programming/IOS/NewProject/WannaEat/Controllers/TableVC/CustomTableViewCell.swift"
-                  timestampString = "543942151.550638"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "13">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WannaEat.CustomTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; WannaEat.CustomTableViewCell"
-                  moduleName = "WannaEat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Apple/Desktop/Programming/IOS/NewProject/WannaEat/Controllers/TableVC/CustomTableViewCell.swift"
-                  timestampString = "543942151.55466"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WannaEat.CustomTableViewCell.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;WannaEat.CustomTableViewCell&gt;"
-                  moduleName = "WannaEat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Apple/Desktop/Programming/IOS/NewProject/WannaEat/Controllers/TableVC/CustomTableViewCell.swift"
-                  timestampString = "543942151.558439"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WannaEat.CustomTableViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;WannaEat.CustomTableViewCell&gt;"
-                  moduleName = "WannaEat"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Apple/Desktop/Programming/IOS/NewProject/WannaEat/Controllers/TableVC/CustomTableViewCell.swift"
-                  timestampString = "543942151.562411"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "46">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

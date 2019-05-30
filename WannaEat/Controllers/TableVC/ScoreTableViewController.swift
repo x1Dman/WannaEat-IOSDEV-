@@ -2,7 +2,7 @@
 //  ScoreTableViewController.swift
 //  WannaEat
 //
-//  Created by Apple on 20/03/2018.
+//  Created by Apple on 20/03/2010.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
@@ -20,14 +20,7 @@ class ScoreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        //self.refreshControl = nil
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.tableView.separatorColor = .white
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +56,7 @@ class ScoreTableViewController: UITableViewController {
         }else{
             cell.textLabel?.text = "Undefined food"
         }
+        cell.textLabel?.textColor = .white
         if abc[indexPath.row].thumbnail! != "" {
             let url = URL(string: miniParse(str: abc[indexPath.row].thumbnail!))
             let data = try? Data(contentsOf: url!)
@@ -70,6 +64,7 @@ class ScoreTableViewController: UITableViewController {
         }else{
             cell.imageView?.image = UIImage(named: "rest")
         }
+        cell.backgroundColor = .black
         return cell
     }
 

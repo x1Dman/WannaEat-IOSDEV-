@@ -1,7 +1,7 @@
 //  TableViewController.swift
 //  WannaEat
 //
-//  Created by Apple on 12/03/2018.
+//  Created by Apple on 12/03/2019.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
@@ -79,6 +79,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        self.tableView.backgroundColor = .black
         self.refreshControl = nil
     }
 
@@ -107,6 +108,8 @@ class TableViewController: UITableViewController {
         let currentText = dataArr[indexPath.row]
         cell.textLabel?.text = currentText
         //cell.imageView?.image = UIImage(named: currentText)
+        cell.backgroundColor = .black
+        cell.textLabel?.textColor = .white
         return cell
     }
 

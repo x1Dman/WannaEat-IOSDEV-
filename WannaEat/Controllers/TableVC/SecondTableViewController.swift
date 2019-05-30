@@ -12,7 +12,8 @@ class SecondTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.separatorColor = .white
+        self.tableView.backgroundColor = .black
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
