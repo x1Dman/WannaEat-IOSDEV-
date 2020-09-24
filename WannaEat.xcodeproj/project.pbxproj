@@ -23,7 +23,10 @@
 		18F1C2D92049692400333ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F1C2D72049692400333ACC /* Main.storyboard */; };
 		18F1C2DB2049692400333ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18F1C2DA2049692400333ACC /* Assets.xcassets */; };
 		18F1C2DE2049692400333ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F1C2DC2049692400333ACC /* LaunchScreen.storyboard */; };
-		18F26CB5206532F300C85E67 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F26CB4206532F300C85E67 /* CustomTableViewCell.swift */; };
+		E4923971251D34C300259D11 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923970251D34C300259D11 /* Credentials.swift */; };
+		E4923973251D357400259D11 /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923972251D357400259D11 /* Credits.swift */; };
+		E4923975251D44E000259D11 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923974251D44E000259D11 /* Receipt.swift */; };
+		E4923977251D4CF500259D11 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4923976251D4CF500259D11 /* CollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +47,13 @@
 		18F1C2DA2049692400333ACC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18F1C2DD2049692400333ACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18F1C2DF2049692400333ACC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18F26CB4206532F300C85E67 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		69651F2D96EEA0F96BAC1CC7 /* Pods-WannaEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat.debug.xcconfig"; sourceTree = "<group>"; };
 		BF23D8127BFDF18826D64E51 /* Pods-WannaEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaEat/Pods-WannaEat.release.xcconfig"; sourceTree = "<group>"; };
 		D7FB3F162F205BF19B6D982F /* Pods_WannaEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4923970251D34C300259D11 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = WannaEat/Credentials.swift; sourceTree = SOURCE_ROOT; };
+		E4923972251D357400259D11 /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Credits.swift; path = WannaEat/Credits.swift; sourceTree = SOURCE_ROOT; };
+		E4923974251D44E000259D11 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Receipt.swift; path = WannaEat/Receipt.swift; sourceTree = SOURCE_ROOT; };
+		E4923976251D4CF500259D11 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,7 @@
 				18D136A020569DE700A400F1 /* TableViewController.swift */,
 				183EA9FC20614E5D0069A25E /* ScoreTableViewController.swift */,
 				18272AB5205BDD7200BE59A3 /* SecondTableViewController.swift */,
-				18F26CB4206532F300C85E67 /* CustomTableViewCell.swift */,
+				E4923976251D4CF500259D11 /* CollectionCell.swift */,
 			);
 			path = TableVC;
 			sourceTree = "<group>";
@@ -124,6 +130,9 @@
 		18F26CB62065331D00C85E67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4923970251D34C300259D11 /* Credentials.swift */,
+				E4923972251D357400259D11 /* Credits.swift */,
+				E4923974251D44E000259D11 /* Receipt.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,9 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4923975251D44E000259D11 /* Receipt.swift in Sources */,
 				18272AB8205BE10200BE59A3 /* AccViewController.swift in Sources */,
 				18272AB4205BDC8400BE59A3 /* MyRecipesViewController.swift in Sources */,
-				18F26CB5206532F300C85E67 /* CustomTableViewCell.swift in Sources */,
 				18F1C2D62049692400333ACC /* SecondViewController.swift in Sources */,
 				18F1C2D22049692400333ACC /* AppDelegate.swift in Sources */,
 				18882C13206436F600908ACE /* InfoViewController.swift in Sources */,
@@ -306,7 +315,10 @@
 				18308AC020654C6900B12823 /* WebViewController.swift in Sources */,
 				18272AB6205BDD7200BE59A3 /* SecondTableViewController.swift in Sources */,
 				18D136A120569DE700A400F1 /* TableViewController.swift in Sources */,
+				E4923977251D4CF500259D11 /* CollectionCell.swift in Sources */,
+				E4923971251D34C300259D11 /* Credentials.swift in Sources */,
 				183EA9FD20614E5D0069A25E /* ScoreTableViewController.swift in Sources */,
+				E4923973251D357400259D11 /* Credits.swift in Sources */,
 				18EEA1B12052901F00EF7DAB /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
